@@ -1,0 +1,169 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@jych/glee</title>
+	<meta name="description" content="Documentation for @jych/glee">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@jych/glee</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@jych/glee</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#glee" id="glee" style="color: inherit; text-decoration: none;">
+					<h1>Glee</h1>
+				</a>
+				<p>Glee is a JavaScript package that provides Express middleware for request and response validation.</p>
+				<p>The middleware uses Joi - the popular Hapi-ecosystem validation library - for validation and validates request path params, query params, headers, and body, and the response headers and body.</p>
+				<p>Glee aims to provide a Hapi-like validation experience for the Express ecosystem.</p>
+				<p><strong><a href="">Full Documentation</a></strong></p>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<p>Install using yarn:</p>
+				<pre><code class="language-bash">yarn add @jych/glee</code></pre>
+				<p>or npm:</p>
+				<pre><code class="language-bash">npm install @jych/glee</code></pre>
+				<a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
+					<h2>Example Usage</h2>
+				</a>
+				<p>Using Glee is as simple as creating a Glee instance and then passing a Joi Schema to one of it&#39;s &quot;get validator&quot; methods. The result is an Express Middleware.</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> express, { Request, Response } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;express&#x27;</span>
+<span class="hljs-keyword">import</span> { Glee } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@jych/glee&#x27;</span>
+<span class="hljs-keyword">import</span> Joi <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@hapi/joi&#x27;</span>;
+
+<span class="hljs-keyword">const</span> schema = Joi.object();
+
+<span class="hljs-keyword">const</span> glee = <span class="hljs-keyword">new</span> Glee();
+<span class="hljs-keyword">const</span> queryValidatorMw = glee.getQueryValidator(schema);
+
+<span class="hljs-keyword">const</span> app = express();
+
+app.get(
+    <span class="hljs-string">&#x27;/&#x27;</span>,
+    queryValidatorMw,
+    <span class="hljs-function">(<span class="hljs-params">req: Request, res: Response</span>) =&gt;</span> {
+        res.status(<span class="hljs-number">200</span>).send(<span class="hljs-string">&#x27;Hello world!&#x27;</span>);
+    }
+);</code></pre>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
+				</a>
+				<p>Pull requests are welcome. Please report issues on the <a href="https://github.com/jamescallumyoung/glee/issues">issue traker</a>.</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>Glee uses the <a href="https://github.com/jamescallumyoung/glee/blob/master/LICENSE">MIT license</a>.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_glee_.html">&quot;<wbr>Glee&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_gleeconfig_.html">&quot;<wbr>Glee<wbr>Config&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_middlewarefunction_.html">&quot;<wbr>Middleware<wbr>Function&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_reqvalidatable_.html">&quot;<wbr>Req<wbr>Validatable&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_defaultgleeconfig_.html">&quot;default<wbr>Glee<wbr>Config&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_index_.html">&quot;index&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
