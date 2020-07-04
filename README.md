@@ -6,7 +6,8 @@ The middleware uses Joi - the popular Hapi-ecosystem validation library - for va
 
 Glee aims to provide a Hapi-like validation experience for the Express ecosystem.
 
-**[Full Documentation](https://jamescallumyoung.github.io/glee/)**
+**[Online Documentation](https://jamescallumyoung.github.io/glee/)**<br />
+**[GitHub Repo](https://github.com/jamescallumyoung/glee)**
 
 ## Installation
 
