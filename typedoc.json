@@ -1,0 +1,8 @@
+{
+    "inputFiles": ["./src"],
+    "mode": "modules",
+    "out": "docs",
+    "excludeNotExported": true,
+    "excludePrivate": true,
+    "readme": "./README.md"
+  }
