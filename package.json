@@ -1,6 +1,6 @@
 {
   "name": "@jych/glee",
-  "version": "0.1.0",
+  "version": "0.1.1-1",
   "description": "Bring Joi to Express with Glee!",
   "main": "dist/index.js",
   "author": "James Young <hello@jamesyoung.ch>",
