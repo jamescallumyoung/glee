@@ -2,6 +2,7 @@
   "name": "@jych/glee",
   "version": "0.1.1-1",
   "description": "Bring Joi to Express with Glee!",
+  "keywords": ["express", "middleware", "joi", "validation"],
   "main": "dist/index.js",
   "author": "James Young <hello@jamesyoung.ch>",
   "license": "MIT",
